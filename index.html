@@ -6,42 +6,54 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-icons/bootstrap-icons.css">
     <title>SuperSonicRevolution</title>
 
-    <!--nav bar-->
-    <nav id="navbar" class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="assets/images/SSR_logo_2023_icon5.png" height="80">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="#keyVisual">主頁</a>
-                    <a class="nav-link" href="#about">關於SSR</a>
-                    <a class="nav-link" href="#eventInfo">活動資訊</a>
-                    <a class="nav-link" href="#playerList">跑者資料庫</a>
-                    <a class="nav-link" href="#contactUs">聯繫我們</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+
 
 </head>
 <body>
     <div id="keyVisual">
-        <img src="./assets/images/ssr_logo.png">
+        <!--nav bar-->
+        <nav id="navbar" class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/SSR_logo_icon.png" height="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="#keyVisual">主頁</a>
+                        <a class="nav-link" href="#about">關於SSR</a>
+                        <a class="nav-link" href="#eventInfo">活動資訊</a>
+                        <a class="nav-link" href="#playerList">跑者資料庫</a>
+                        <a class="nav-link" href="#contactUs">聯繫我們</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="videobox">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://player.twitch.tv/?channel=SuperSonicRevolution&parent=dsa83171.git.io" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
-
     <div id="about">
+        <h1>關於SSR</h1>
 
     </div>
     <div id="eventInfo">
+        <h1>活動資訊</h1>
 
     </div>
     <!--玩家清單-->
     <div id="playerList">
-        <div class="row px-4 pt-4">
+        <h1>跑者資料庫</h1>
+        <div class="row">
             <div class="card custom-card" v-for="item in player">
                 <div class="row g-0" >
                     <div class="col-3 avatar">
