@@ -1,0 +1,95 @@
+/* 0 - 768px*/
+body{
+    font-family:"Microsoft YaHei";
+    background-image: url("../../assets/images/background.jpg");;
+}
+
+#navbar{
+  font-size: large;
+  font-weight: bolder;
+  
+}
+
+.custom-card{
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin-bottom: 5px;
+}
+.avatar img{
+  width:100% ;
+}
+
+#banner img{
+  width: 100%;
+}
+
+.card-text{
+  text-overflow: ellipsis;
+}
+  
+.icon{
+  width:30px;
+}
+.icon.red{
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(326deg) brightness(100%) contrast(180%);
+}
+.icon.purple{
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(224deg) brightness(85%) contrast(180%);
+}
+.labelTag{
+  cursor:pointer;
+  padding:4px 4px;
+  display: flex;
+  margin-right: 3px;
+  color: #fff;
+  background: #7b8dac;
+  border-radius: 5px;
+  font-size: small;
+}
+
+@media screen and (min-width: 768px){
+  .custom-card{
+    max-width: 49% !important;
+    max-height: 300px;
+    padding-left: 0 !important;
+    margin-right: 5px;
+  }
+
+  .avatar img{
+    width:100px ;
+  }
+
+  .card  {
+    width:fit-content;
+  }
+  .card-text{
+    text-overflow: ellipsis;
+  }
+
+
+}
+
+
+
+@media screen and (min-width: 1280px){
+  .custom-card{
+    max-width: 33% !important;
+    max-height: 250px;
+    padding-left: 0 !important;
+    margin-right: 2px;
+  }
+
+  .card .avatar img {
+    width:100px;
+  }
+
+  .card .avatar {
+    width:fit-content;
+  }
+  .card-text{
+    text-overflow: ellipsis;
+  }
+
+}
+  
+  

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style/css/style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-icons/bootstrap-icons.css">
+    <title>SuperSonicRevolution</title>
+
+    <!--nav bar-->
+    <nav id="navbar" class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/SSR_logo_2023_icon5.png" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#keyVisual">主頁</a>
+                    <a class="nav-link" href="#about">關於SSR</a>
+                    <a class="nav-link" href="#eventInfo">活動資訊</a>
+                    <a class="nav-link" href="#playerList">跑者資料庫</a>
+                    <a class="nav-link" href="#contactUs">聯繫我們</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</head>
+<body>
+    <div id="keyVisual">
+        <img src="./assets/images/ssr_logo.png">
+    </div>
+
+    <div id="about">
+
+    </div>
+    <div id="eventInfo">
+
+    </div>
+    <!--玩家清單-->
+    <div id="playerList">
+        <div class="row px-4 pt-4">
+            <div class="card custom-card" v-for="item in player">
+                <div class="row g-0" >
+                    <div class="col-3 avatar">
+                        <img :src=`assets/${item.avatar}` class="img-fluid rounded-start" alt="Avatar">
+                    </div>
+                    <div class="col-9">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.name}}
+                                <a :href="item.links.youtube"><img class="icon red" src="assets/images/community_logo/youtube.svg"></a>
+                                <a :href="item.links.twitch"><img class="icon purple" src="assets/images/community_logo/twitch.svg"></a>
+                            </h5>
+                            <div style="display: flex; width: fit-content;">
+                                <span class="labelTag" v-for="tag in item.tag">{{tag}}</span>
+                            </div>
+                            <p class="card-text">{{item.introduction}}</p>
+                            <p class="card-text"><small class="text-body-secondary">更多資訊 >> </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 引入 Vue.js -->
+    <script src="style/js/vue.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="style/js/jquery-latest.min.js"></script>
+    <script type="module" src="style/js/playerInfo.js"></script>
+
+</body>
+
+<foot>
+    <div id="contactUs">
+
+    </div>
+</foot>
+
+</html>
