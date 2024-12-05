@@ -2,6 +2,7 @@
 body{
     font-family:"Microsoft YaHei";
     background-image: url("../../assets/images/background.jpg");;
+    min-width: 768px;
 }
 html h1{
   font-weight: bold;
@@ -53,7 +54,7 @@ html h1{
 }
 
 .keyVisual{
-  min-height:1000px;
+  min-height:1080px;
   background-size: cover;
   background-image: url("../../assets/images/SSR2024_KV.png");
 }
