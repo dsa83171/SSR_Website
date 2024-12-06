@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="style/css/style.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-icons/bootstrap-icons.css">
+    <script type="module" src="style/js/playerInfo.js"></script>
     <title>SuperSonicRevolution</title>
 
 
@@ -23,8 +24,8 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" href="#keyVisual">主頁</a>
-                        <a class="nav-link" href="#about">關於SSR</a>
-                        <a class="nav-link" href="#eventInfo">活動資訊</a>
+                        <a class="nav-link" href="#about">活動簡介</a>
+                        <a class="nav-link" href="#eventInfo">歷屆活動紀錄</a>
                         <a class="nav-link" href="#playerList">跑者資料庫</a>
                         <a class="nav-link" href="#contactUs">聯繫我們</a>
                     </div>
@@ -36,18 +37,23 @@
                 width="560" 
                 height="315" 
                 src="https://player.twitch.tv/?channel=SuperSonicRevolution&parent=dsa83171.github.io" 
-                frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
         </div>
     </div>
-    <div id="about">
-        <h1>關於SSR</h1>
-
-    </div>
+    <div id="about" >
+        <div class="text_content">
+            <h1>活動簡介</h1></br>
+            <p><span style="font-size: 26px;">「Super Sonic Revolution」</span>(以下簡稱SSR)</p>
+            <p>是由Twitch跟Youtube的眾多遊戲實況主/達人玩家/Vtuber，每年6/1開始，於Twitch舉辦約15~30天不等，進行音速小子系列(索尼克／Sonic／ソニック)各類型遊戲實況的接力活動。</p>
+            <p>在活動之中可以看到強大的技術怪人表演各種飛越穿牆，也有努力不懈堅持到破關的毅力型玩家，以各種方式實況任何的音速小子遊戲！歡迎於6月1日準時收看SSR，或是成為我們的一員，一起在遊戲中突破極限吧！</p>
+            <p>我們聚集在此的理念各有不同，遊戲粉絲想推廣許多的遊戲，專業玩家想展示自己的訓練成果，也有真愛粉單純的想分享自己在系列作品中獲得的樂趣，在此歡迎各方人士的加入！</p>
+            <p>本活動的形式是參考Twitch繁中圈常見的一天一人接力模式，但並不會完全一樣，過去不少Twitch繁中圈的前輩也以此活動模式辦過洛克人(RC/RND)、惡靈古堡、惡魔城、Speedrun(TSS)等等活動，是已經有一段時間的Twitch繁中圈文化。 </p>
+        </div>
+    </div>  
     <div id="eventInfo">
-        <h1>活動資訊</h1>
+        <h1>歷屆活動紀錄</h1>
 
     </div>
     <!--玩家清單-->
@@ -56,7 +62,7 @@
         <div class="row">
             <div class="card custom-card" v-for="item in player">
                 <div class="row g-0" >
-                    <div class="col-3 avatar">
+                    <div class="col-3 avatar popupLink" data-bs-toggle="modal" data-bs-target="#playerModal" onclick="getID()">
                         <img :src=`assets/${item.avatar}` class="img-fluid rounded-start" alt="Avatar">
                     </div>
                     <div class="col-9">
@@ -69,7 +75,7 @@
                                 <span class="labelTag" v-for="tag in item.tag">{{tag}}</span>
                             </div>
                             <p class="card-text">{{item.introduction}}</p>
-                            <p class="card-text"><small class="text-body-secondary">更多資訊 >> </small></p>
+                            <p class="card-text popupLink" ><small class="text-body-secondary">更多資訊 >> </small></p>
                         </div>
                     </div>
                 </div>
@@ -77,12 +83,27 @@
         </div>
     </div>
 
-
+    <!-- Modal -->
+    <div class="modal fade" id="playerModal" tabindex="-1" aria-labelledby="playerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="playerModalLabel">Modal test</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 引入 Vue.js -->
     <script src="style/js/vue.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="style/js/jquery-latest.min.js"></script>
-    <script type="module" src="style/js/playerInfo.js"></script>
 
 </body>
 

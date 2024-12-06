@@ -4,6 +4,7 @@ body{
     background-image: url("../../assets/images/background.jpg");;
     min-width: 768px;
 }
+
 html h1{
   font-weight: bold;
   text-shadow: -1px -1px 0 #ffffff,
@@ -13,56 +14,24 @@ html h1{
   text-align: center;
 }
 
-.navbar{
-  font-size: x-large;
-  font-weight: bolder;
-  text-shadow: -1px -1px 0 #ffffff,
-  1px -1px 0 #ffffff,
-  -1px 1px 0 #ffffff,
-  1px 1px 0 #ffffff;
+#about{
+  padding: 5% 10%;
 }
 
-.videobox {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
+.avatar img{
+  width:100% ;
 }
 
-.videobox iframe {
-  padding: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.row{
-  margin:0px !important;
-
+.card-text{
+  text-overflow: ellipsis;
 }
 
 .custom-card{
   max-width: 100% !important;
   padding: 0 !important;
   margin-bottom: 5px;
-
-}
-.avatar img{
-  width:100% ;
 }
 
-.keyVisual{
-  min-height:1080px;
-  background-size: cover;
-  background-image: url("../../assets/images/SSR2024_KV.png");
-}
-
-.card-text{
-  text-overflow: ellipsis;
-}
-  
 .icon{
   width:30px;
 }
@@ -72,6 +41,14 @@ html h1{
 .icon.purple{
   filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(224deg) brightness(85%) contrast(180%);
 }
+
+.keyVisual{
+  min-height:1080px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../assets/images/SSR2024_KV.png");
+}
+
 .labelTag{
   cursor:pointer;
   padding:4px 4px;
@@ -83,14 +60,53 @@ html h1{
   font-size: small;
 }
 
-@media screen and (min-width: 768px){
-  .custom-card{
-    max-width: 49% !important;
-    max-height: 300px;
-    padding-left: 0 !important;
-    margin-left: 5px;
-  }
+.navbar{
+  font-size: x-large;
+  font-weight: bolder;
+  text-shadow: -1px -1px 0 #ffffff,
+  1px -1px 0 #ffffff,
+  -1px 1px 0 #ffffff,
+  1px 1px 0 #ffffff;
+}
 
+.popupLink{
+  cursor: pointer;
+  width: fit-content;
+}
+
+.row{
+  margin:0px !important;
+}
+
+.text_content{
+  padding: 5% 10%;
+  border-radius: 10px;
+  border: #fff 2px solid;
+  background-color: rgba(255,255,255,0.75) ;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.videobox {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.videobox iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding:50px;
+}
+
+
+
+
+@media screen and (min-width: 768px){
   .avatar img{
     width:100px ;
   }
@@ -102,17 +118,28 @@ html h1{
     text-overflow: ellipsis;
   }
 
+  .custom-card{
+    max-width: 49% !important;
+    max-height: 300px;
+    padding-left: 0 !important;
+    margin-left: 5px;
+  }
 
 }
 
+@media screen and (min-width:990px) {
+  .keyVisual{
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../assets/images/SSR2024_KV16_9.png");
+  }
+    
+}
 
 
 @media screen and (min-width: 1280px){
-  .custom-card{
-    max-width: 33% !important;
-    max-height: 250px;
-    padding-left: 0 !important;
-    margin-left: 2px;
+  #about{
+    padding: 5% 15%;
   }
 
   .card .avatar img {
@@ -124,6 +151,13 @@ html h1{
   }
   .card-text{
     text-overflow: ellipsis;
+  }
+
+  .custom-card{
+    max-width: 33% !important;
+    max-height: 250px;
+    padding-left: 0 !important;
+    margin-left: 2px;
   }
 
 }

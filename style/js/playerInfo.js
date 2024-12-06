@@ -1,10 +1,29 @@
-import data  from '../../assets/player.json' with  { type: "json"};
-var app = new Vue({
+import player  from '../../assets/player.json' with  { type: "json"};
+new Vue({
     el: '#playerList',
     data: {
-        player: data
-    },
+        player: player
+    }
 });
+
+new Vue({
+    el: '#playerModal',
+    data: {
+        player: player
+    },
+    methods:{
+        
+    }
+});
+
+
+// import events  from '../../assets/events.json' with  { type: "json"};
+// new Vue({
+//     el: '#carouselPV',
+//     data: {
+//         events: events
+//     }
+// });
 
 $(function(){
     var len = 60; // 超過50個字以"..."取代
