@@ -2,6 +2,7 @@
     {
         "id":0,
         "name": "Append",
+        "displayName": "Append",
         "avatar": "images/Avatar001.png",
         "links": {
             "youtube": "https://www.youtube.com/channel/UCgjRD4CezViF9yvasbTnvow",
@@ -43,8 +44,8 @@
             "twitch": "https://www.twitch.tv/append"
         },
         "tag": ["休閒玩家",
-                "挑戰型 技術型玩家",
-                "粉絲型玩家"
+                "粉絲型玩家",
+                "挑戰型 技術型玩家"
         ],
         "introduction": "大家好，我是SonicBoss,一位正常玩遊戲的正直型玩家。\n從粉絲遊戲開始實況，現在是以實況格鬥跟多數單機遊戲、粉絲遊戲為主，接觸實況有九年，有70%是實況Sonic遊戲居多。\n偏向實況Sonic Adventure DX技術性跑法以及模組遊玩教學。目前居住在YouTube平台上實況。\n有參加比賽經驗，參加過Beepro Cup,國外Dragon ball fighters World tour LCQ等大型賽事。\n歡迎各位來我的實況台跟我聊天～",
         "goodAtSonicGames": [
@@ -111,7 +112,7 @@
                 "link": "https://youtu.be/x78dvC4j4-I"
             }
         ],
-        "message": "按讚、訂閱、開啟小鈴鐺。我的頻道會有不少好玩的模組遊戲影片，推"
+        "message": "按讚、訂閱、開啟小鈴鐺。\n我的頻道會有不少好玩的模組遊戲影片，推"
     },
     {
         "id":2,
@@ -210,6 +211,7 @@
     {
         "id":4,
         "name": "Hunman360",
+        "displayName": "Hunman360",
         "avatar": "images/Avatar005.png",
         "links": {
             "youtube": "https://www.youtube.com/@Hunman360",
@@ -366,6 +368,7 @@
     {
         "id":7,
         "name": "Zexas",
+        "displayName": "Zexas",
         "avatar": "images/Avatar008.png",
         "links": {
             "youtube": "https://www.youtube.com/c/zexasowen",

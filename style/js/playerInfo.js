@@ -2,19 +2,38 @@ import player  from '../../assets/player.json' with  { type: "json"};
 new Vue({
     el: '#playerList',
     data: {
-        player: player
+        player: player,
+        name:'',
+        displayName:'',
+        avatar:'',
+        youtube:'',
+        twitch:'',
+        tag:'',
+        introduction:'',
+        goodAtSonicGames:'',
+        goodAtOtherGames:'',
+        joinedStreamingHistory:'',
+        classicVideoSections:'',
+        message:'',
+    },
+    methods:{
+        getID(id){
+            this.name = player[id].name;
+            this.displayName = player[id].displayName;
+            this.avatar = "assets/"+player[id].avatar;
+            this.youtube = player[id].links.youtube
+            this.twitch = player[id].links.twitch
+            this.tags = player[id].tag
+            this.introduction = player[id].introduction
+            this.goodAtSonicGames = player[id].goodAtSonicGames
+            this.goodAtOtherGames = player[id].goodAtOtherGames
+            this.joinedStreamingHistory = player[id].joinedStreamingHistory
+            this.classicVideoSections = player[id].classicVideoSections
+            this.message = player[id].message
+        }
     }
 });
 
-new Vue({
-    el: '#playerModal',
-    data: {
-        player: player
-    },
-    methods:{
-        
-    }
-});
 
 
 // import events  from '../../assets/events.json' with  { type: "json"};
@@ -26,7 +45,7 @@ new Vue({
 // });
 
 $(function(){
-    var len = 60; // 超過50個字以"..."取代
+    var len = 60; // 超過60個字以"..."取代
     $(".card-text").each(function(i){
         if($(this).text().length>len){
             $(this).attr("title",$(this).text());
