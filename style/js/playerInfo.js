@@ -34,6 +34,18 @@ new Vue({
     }
 });
 
+
+import events  from '../../assets/events.json' with  { type: "json"};
+new Vue({
+    el: '#eventInfo',
+    data: {
+        events: events,
+    },
+    methods:{
+    }
+});
+
+
 // new Vue({
 //     el: '#main',
 //     mounted() {

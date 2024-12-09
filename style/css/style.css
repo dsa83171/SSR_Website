@@ -78,6 +78,22 @@ footer{
   align-items: center;
 }
 
+#eventInfo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5%;
+  /* align-content: center;
+  align-items: center; */  
+}
+
+.align-items-start{
+  background-color: #ffffffdd;
+  border-radius: .5em;
+  border: #fff 2px solid;
+}
+
 .footer_icons{
   display: flex;
   justify-content: center;
