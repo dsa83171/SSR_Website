@@ -34,15 +34,29 @@ new Vue({
     }
 });
 
-
-
-// import events  from '../../assets/events.json' with  { type: "json"};
 // new Vue({
-//     el: '#carouselPV',
-//     data: {
-//         events: events
+//     el: '#main',
+//     mounted() {
+//         window.addEventListener('scroll', this.handleScroll)
+//       },
+//       handleScroll() {
+//         if (window.innerWidth > 768) {
+//           document.getElementById("keyVisual").scrollTo(0,100);
+
+//         } 
+//         else {
+          
+//         }
+//         if (window.scrollY > 200 && window.innerWidth > 768) {
+//           // scrollY 滾輪滾動的距離
+//         } 
+//         else {
+      
+//         }
 //     }
-// });
+// })
+
+
 
 $(function(){
     var len = 60; // 超過60個字以"..."取代

@@ -34,7 +34,7 @@ footer{
   margin-top: 100px;
   min-height: 200px;
   border-top: #fff 5px solid;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.85);
   color: #fff;
   text-align: center;
 }
@@ -44,7 +44,7 @@ footer{
 }
 
 .avatar img{
-  width:100% ;
+  width:100%;
 }
 
 .card-text{
@@ -65,10 +65,36 @@ footer{
   margin-bottom: 5px;
 }
 
+#contactUs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .container-fluid{
   display: flex;
-  justify-content: space-evenly;;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+.footer_icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_icon_radius{
+  margin: 1em;
+  border-radius: 999em;
+  background-color:white;
+  width: fit-content;
+}
+
+
+
+.footer_icon_width{
+  width:80px;
 }
 
 .icon{
