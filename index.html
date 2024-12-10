@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style/css/style.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="style/css/swiper-bundle.min.css" />
     <script type="module" src="style/js/playerInfo.js"></script>
     <title>Super Sonic Revolution</title>
 
@@ -61,9 +62,10 @@
                             role="tab" 
                             :aria-controls="'v-pills-'+event.year" 
                             aria-selected="false"
-                            v-for="event in events.slice().reverse()"
-                            >{{event.year}}屆</button>
-
+                            v-for="(event,index) in events.slice().reverse()"
+                            >
+                            <span style="font-size: 1.2em;">{{event.year}}年</span>
+                    </button>
                 </div>
                 <!--右側欄內容-->
                 <div class="tab-content" id="v-pills-tabContent">
@@ -72,19 +74,36 @@
                         role="tabpanel" 
                         :aria-labelledby="'v-pills-'+event.year+'-tab'" 
                         tabindex="0"
-                        v-for="event in events.slice().reverse()"
+                        v-for="(event,index) in events.slice().reverse()"
                     >
                         <h4>{{event.title}}</h4>
                         <p>{{event.content}}</p>
+                        <div class="eventList" v-if="event.eventList.length == 1">
+                            <a :href="'assets/'+event.eventList[0]" target="_blank">
+                                <img src="bootstrap/css/bootstrap-icons/calendar2-week-fill.svg" class="icon green"><span >{{event.year}}年節目表</span>
+                            </a>
+                        </div>
+                        <div class="swiper mySwiper"  v-else-if="event.eventList.length > 1">
+                            <img src="bootstrap/css/bootstrap-icons/calendar2-week-fill.svg" class="icon green"><span>{{event.year}}年節目表</span>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="listImg in event.eventList">
+                                    <a :href="'assets/'+listImg" target="_blank"><img :src="'assets/'+listImg" style="max-width: 480px;"></a>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="eventList" v-else>
+                            <span >尚未準備好</span>
+                        </div>
                         <div class="vod">
                             <a :href="event.links.vod">
                                 <img src="assets/images/community_logo/twitch.svg" class="icon purple" >
-                                <span> {{event.year}}屆活動實況紀錄 >></span>
+                                <span> {{event.year}}年活動實況紀錄 >></span>
                             </a>
                         </div>
                         <div class="eventImage" v-if="event.links.pv">
                             <img src="assets/images/community_logo/youtube.svg" class="icon red" style="margin: .2em 0 .2em 1em">
-                            <a :href="event.links.pv" ><span> {{event.year}}屆活動PV </span>
+                            <a :href="event.links.pv" ><span> {{event.year}}年活動PV </span>
                                 <img :src="'assets/'+event.pv_image" class="pv">
                             </a>
                         </div>
@@ -202,6 +221,11 @@
     <div class="row" id="contactUs">
         <div class="footer_icons">
             <div class="footer_icon_radius">
+                <a href="https://x.com/SSRSonicTwitch">
+                    <img class="footer_icon_width" style="padding:.2em;" src="./assets/images/community_logo/twitter.svg">
+                </a>
+            </div>
+            <div class="footer_icon_radius">
                 <a href="https://discord.gg/cMV8s8E">
                     <img class="footer_icon_width" src="./assets/images/community_logo/discord_icon.png">
                 </a>
@@ -231,6 +255,7 @@
     <script src="style/js/vue.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="style/js/jquery-latest.min.js"></script>
+    <script src="style/js/swiper-bundle.js"></script>
 </footer>
 
 </html>

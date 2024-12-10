@@ -45,29 +45,23 @@ new Vue({
     }
 });
 
+var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+});
 
-// new Vue({
-//     el: '#main',
-//     mounted() {
-//         window.addEventListener('scroll', this.handleScroll)
-//       },
-//       handleScroll() {
-//         if (window.innerWidth > 768) {
-//           document.getElementById("keyVisual").scrollTo(0,100);
 
-//         } 
-//         else {
-          
-//         }
-//         if (window.scrollY > 200 && window.innerWidth > 768) {
-//           // scrollY 滾輪滾動的距離
-//         } 
-//         else {
-      
-//         }
-//     }
-// })
 
+
+$(function(){
+    var time = new Date();
+    var eventRight = "#v-pills-"+time.getFullYear();
+    var eventLeft = "#v-pills-"+time.getFullYear()+"-tab";
+    $(eventRight).addClass("show");
+    $(eventRight).addClass("active");
+    $(eventLeft).addClass("active");
+});
 
 
 $(function(){
