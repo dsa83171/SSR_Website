@@ -51,38 +51,44 @@
         <div id="eventInfo">
             <h1>歷屆活動紀錄</h1>
             <div class="d-flex align-items-start">
+                <!--左側欄項目-->
                 <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <div v-for="(event , index) in events.slice().reverse()">
                     <button class="nav-link" 
-                            id="v-pills-home-tab" 
+                            :id="'v-pills-'+event.year+'-tab'" 
                             data-bs-toggle="pill" 
-                            :data-bs-target="'#v-pills-'+event.title" 
+                            :data-bs-target="'#v-pills-'+event.year" 
                             type="button" 
                             role="tab" 
-                            aria-controls="v-pills-home" 
+                            :aria-controls="'v-pills-'+event.year" 
                             aria-selected="false"
-                            >{{event.title}}屆
-                    </button>
-                    </div>
-                    <!-- <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
-                    <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false">Disabled</button>
-                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
-                    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button> -->
+                            v-for="event in events.slice().reverse()"
+                            >{{event.year}}屆</button>
+
                 </div>
+                <!--右側欄內容-->
                 <div class="tab-content" id="v-pills-tabContent">
-                    <div v-for="event in events.slice().reverse()">
-                        <div class="tab-pane fade" 
-                            :id="'v-pills-'+event.title" 
-                            role="tabpanel" 
-                            aria-labelledby="v-pills-home-tab" 
-                            tabindex="0"
-                        >{{event.content}}
+                    <div class="tab-pane fade" 
+                        :id="'v-pills-'+event.year" 
+                        role="tabpanel" 
+                        :aria-labelledby="'v-pills-'+event.year+'-tab'" 
+                        tabindex="0"
+                        v-for="event in events.slice().reverse()"
+                    >
+                        <h4>{{event.title}}</h4>
+                        <p>{{event.content}}</p>
+                        <div class="vod">
+                            <a :href="event.links.vod">
+                                <img src="assets/images/community_logo/twitch.svg" class="icon purple" >
+                                <span> {{event.year}}屆活動實況紀錄 >></span>
+                            </a>
+                        </div>
+                        <div class="eventImage" v-if="event.links.pv">
+                            <img src="assets/images/community_logo/youtube.svg" class="icon red" style="margin: .2em 0 .2em 1em">
+                            <a :href="event.links.pv" ><span> {{event.year}}屆活動PV </span>
+                                <img :src="'assets/'+event.pv_image" class="pv">
+                            </a>
                         </div>
                     </div>
-                    <!-- <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">...</div>
-                    <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">...</div>
-                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
-                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div> -->
                 </div>
             </div>
             <!-- <div class="videobox">
