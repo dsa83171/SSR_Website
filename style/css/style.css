@@ -47,6 +47,7 @@ footer{
   background-color: #ffffffdd;
   border-radius: .5em;
   border: #fff 3px solid;
+  padding: 2% 2% 2% 0%;
 }
 
 .avatar img{
@@ -90,14 +91,18 @@ footer{
   justify-content: center;
   flex-direction: column;
   padding: 5%;
+  align-content: center;
   /* align-content: center;
-  align-items: center; */  
+   */  
 }
 
 .eventImage{
   border-radius: 10px;
   background-color: #fff;
   box-shadow: #4d4d4d 1px 1px 3px;
+  display: flex;
+  align-content: center !important;
+  flex-wrap: nowrap;
 }
 
 .eventList{
@@ -256,6 +261,26 @@ footer{
   background-color: #fff;
   box-shadow: #4d4d4d 1px 1px 3px;
 }
+.swiper-button-next{
+  text-shadow: -1px -1px 0 #ffffff,
+  1px -1px 0 #ffffff,
+  -1px 1px 0 #ffffff,
+  1px 1px 0 #ffffff;
+  color:#000 !important;
+}
+
+.swiper-button-prev{
+  text-shadow: -1px -1px 0 #ffffff,
+  1px -1px 0 #ffffff,
+  -1px 1px 0 #ffffff,
+  1px 1px 0 #ffffff;
+  color:#000 !important;
+}
+
+.swiper-pagination-bullet-active{
+  border: #000 2px solid;
+  background: #fff !important;
+}
 
 .swiper-slide {
   text-align: center;
@@ -278,6 +303,11 @@ footer{
   text-overflow: ellipsis;
   white-space: pre-line;
 }
+
+.tab-content{
+  text-align: center;
+}
+
 
 .text_content{
   padding: 5% 10%;
@@ -334,7 +364,6 @@ footer{
 
   .custom-card{
     max-width: 49% !important;
-    max-height: 300px;
     padding-left: 0 !important;
     margin-left: 5px;
   }
@@ -375,12 +404,37 @@ footer{
 
   .custom-card{
     max-width: 32% !important;
-    max-height: 250px;
     padding-left: 0 !important;
     margin-left: 5px;
     left: 1.5%;
   }
 
+  .eventList{
+    background-color: #fff;
+    box-shadow: #4d4d4d 1px 1px 3px;
+    border-radius: 10px;
+    width: fit-content;
+    padding: .2em 1em;
+    margin-bottom: 1em;
+  
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+    min-width: 800px;
+    min-height: 450px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: #4d4d4d 1px 1px 3px;
+  }
+  
+  .pv{
+    display: flex;
+    min-width: 800px;
+    border-radius: 0 0 10px 10px;
+  }
+  
   .modal{
     --bs-modal-width: 80% !important;
     
