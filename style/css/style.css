@@ -198,6 +198,20 @@ footer{
   margin-bottom: .5em;
 }
 
+.modal-open{
+  padding-right: 0px !important;
+}
+
+.modal-backdrop{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+#playerModal{
+  padding-right: 0px !important;
+}
+
 .nav{
   padding-top:5px;
 }
@@ -234,9 +248,7 @@ footer{
   color: #77777c;
 }
 
-#playerModal{
-  padding-right: 0 !important;
-}
+
 
 .pv{
   display: flex;
