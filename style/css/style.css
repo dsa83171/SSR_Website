@@ -67,7 +67,8 @@ footer{
 }
 
 .custom-card{
-  max-width: 100% !important;
+  max-width: 90% !important;
+  left: 5%;
   padding: 0 !important;
   margin-bottom: 5px;
 }
@@ -380,6 +381,7 @@ footer{
 
   .custom-card{
     max-width: 49% !important;
+    left:0;
     padding-left: 0 !important;
     margin-left: 5px;
   }
