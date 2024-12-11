@@ -234,6 +234,10 @@ footer{
   color: #77777c;
 }
 
+#playerModal{
+  padding-right: 0 !important;
+}
+
 .pv{
   display: flex;
   max-width: 480px;
